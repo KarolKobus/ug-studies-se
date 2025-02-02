@@ -2,6 +2,8 @@ import os
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
+from gui.question1 import Question1
+
 
 class MainWindow:
     def __init__(self, root):
@@ -22,3 +24,19 @@ class MainWindow:
             img_label.pack(pady=10)
         except Exception as e:
             messagebox.showwarning("Błąd wczytywania obrazu", f"Nie udało się wczytać obrazka: {e}")
+
+        # Dodanie tekstu pod grafiką
+        description_label = tk.Label(root,
+                                     text="Niniejszy program służy do szacowania ryzyka zachorowania na chorobę Alzheimera na podstawie informacji uzyskanych od pacjenta.",
+                                     wraplength=500, justify="center", font=("Arial", 12))
+        description_label.pack(pady=10)
+
+        # Przycisk Rozpocznij
+        start_button = tk.Button(root, text="Rozpocznij", font=("Arial", 14), command=self.open_question1)
+        start_button.pack(pady=20)
+
+    def open_question1(self):
+        self.root.destroy()
+        root = tk.Tk()
+        app = Question1(root)
+        root.mainloop()
