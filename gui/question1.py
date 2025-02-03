@@ -1,5 +1,7 @@
 import tkinter as tk
 
+question_history = []  # Historia pytań
+
 
 class Question1:
     def __init__(self, root):
@@ -22,12 +24,37 @@ class Question1:
                                    font=("Arial", 12))
         self.age_slider.pack()
 
-        # Przycisk Dalej
-        tk.Button(root, text="Dalej", font=("Arial", 14), command=self.next_question).pack(pady=20)
+        # Przycisk "Dalej"
+        tk.Button(root, text="Dalej", font=("Arial", 14), command=self.next_question).pack(pady=10)
+
+        # Przycisk "Wstecz"
+        tk.Button(root, text="Wstecz", font=("Arial", 12), command=self.go_back).pack(pady=5)
 
     def next_question(self):
+        """Zapisuje dane i przechodzi do kolejnego okna"""
         sex = self.sex_var.get()
         age = self.age_var.get()
-        print(f"Płeć: {sex}, Wiek: {age}")  # Można zapisać te wartości lub przekazać dalej
+        print(f"Płeć: {sex}, Wiek: {age}")  # Możesz zapisać do pliku
         self.root.destroy()
-        # Tutaj można zaimportować i otworzyć kolejne okno np. Question2
+
+        # Import kolejnego pytania
+        from gui.question2 import Question2
+        root = tk.Tk()
+        question_history.append(self.__class__)  # Dodajemy okno do historii
+        app = Question2(root)
+        root.mainloop()
+
+    def go_back(self):
+        """Cofa do poprzedniego okna (ekran startowy)"""
+        self.root.destroy()
+
+        if question_history:
+            prev_window = question_history.pop()
+            root = tk.Tk()
+            app = prev_window(root)
+            root.mainloop()
+        else:
+            from gui.main_window import MainWindow  # Opóźniony import (rozwiązuje circular import)
+            root = tk.Tk()
+            app = MainWindow(root)
+            root.mainloop()
