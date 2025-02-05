@@ -8,6 +8,7 @@
 import os
 import pandas as pd
 import numpy as np
+import joblib # Do zapisu danych w formacie .pkl
 from sklearn.feature_selection import chi2 # Test istotności chi-kwadrat
 from scipy.stats import shapiro, levene, f_oneway, mannwhitneyu # Testy na normalność rozkładu i istotności (ANOVA, Umanna-Withney'a)
 from sklearn.preprocessing import StandardScaler  # Skalowanie cech (standaryzacja)
@@ -117,3 +118,15 @@ X = sc.fit_transform(X)
 
 #------------------Dzielimy zbiór na testowy i treningowy-------------------------#
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 123)
+
+#------------------Zapisujemy zbiory do pliku .pkl---------------------------------#
+dataset_file_path = os.path.join(script_dir, "dataset.pkl")
+
+joblib.dump((X_train, X_test, y_train, y_test), dataset_file_path)
+
+print(f"Zapisano plik: {dataset_file_path}")
+
+if os.path.exists(dataset_file_path):
+    print("Plik dataset.pkl został pomyślnie zapisany!")
+else:
+    print("Błąd: plik dataset.pkl nie został znaleziony po zapisie!")
