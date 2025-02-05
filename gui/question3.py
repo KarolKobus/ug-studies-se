@@ -1,11 +1,18 @@
 import tkinter as tk
 from gui.question4 import Question4
 
+def previous_window(root):
+    """Cofa do poprzedniego pytania"""
+    root.destroy()
+    from gui.question2 import Question2  # Opóźniony import (rozwiązuje circular import)
+    new_root = tk.Tk()
+    app = Question2(new_root)
+    new_root.mainloop()
 
 class Question3:
     def __init__(self, root):
         self.root = root
-        self.root.title("Pytanie 3 - Historia medyczna")
+        self.root.title("Alzheimer Predictor")
         self.root.geometry("600x800")
 
         # Tytuł sekcji
@@ -13,11 +20,11 @@ class Question3:
 
         # Lista pytań binarnych
         self.questions = {
-            "Czy w rodzinie występowało Alzheimera?": "family_history",
+            "Czy w rodzinie występowała choroba Alzheimera?": "family_history",
             "Czy masz chorobę sercowo-naczyniową?": "cardiovascular_disease",
             "Czy masz cukrzycę?": "diabetes",
             "Czy masz depresję?": "depression",
-            "Czy doznałeś urazu głowy?": "head_injury",
+            "Czy doznałeś kiedyś urazu głowy?": "head_injury",
             "Czy masz nadciśnienie?": "hypertension"
         }
 
@@ -29,8 +36,12 @@ class Question3:
             tk.Radiobutton(root, text="Nie", variable=self.answers[var_name], value=0, font=("Arial", 12)).pack()
             tk.Radiobutton(root, text="Tak", variable=self.answers[var_name], value=1, font=("Arial", 12)).pack()
 
-        # Przycisk Dalej
-        tk.Button(root, text="Dalej", font=("Arial", 14), command=self.next_question).pack(pady=20)
+        # Przycisk Wstecz i Dalej
+        button_frame = tk.Frame(root)
+        button_frame.pack(pady=20)
+
+        tk.Button(button_frame, text="Wstecz", font=("Arial", 14), command=lambda: previous_window(self.root)).pack(side="left", padx=10)
+        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right", padx=10)
 
     def next_question(self):
         responses = {q: v.get() for q, v in self.answers.items()}

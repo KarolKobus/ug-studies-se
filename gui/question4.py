@@ -1,15 +1,25 @@
 import tkinter as tk
 from gui.question5 import Question5
 
+def previous_window(root):
+    """Cofa do poprzedniego pytania"""
+    root.destroy()
+    from gui.question3 import Question3  # Opóźniony import (rozwiązuje circular import)
+    new_root = tk.Tk()
+    app = Question3(new_root)
+    new_root.mainloop()
 
 class Question4:
     def __init__(self, root):
         self.root = root
-        self.root.title("Pytanie 4 - Pomiary kliniczne")
-        self.root.geometry("600x800")
+        self.root.title("Alzheimer Predictor")
+        self.root.geometry("600x750")
 
         # Tytuł sekcji
         tk.Label(root, text="Pomiary kliniczne", font=("Arial", 16, "bold")).pack(pady=10)
+
+        # Opis sekcji
+        tk.Label(root, text="Uzupełnij najświeższe wyniki badań oraz pomiarów.", font=("Arial", 12)).pack(pady=5)
 
         # Pomiary kliniczne z suwakami
         self.measurements = {
@@ -29,8 +39,12 @@ class Question4:
             self.values[label] = var
             tk.Scale(root, from_=min_val, to=max_val, orient="horizontal", variable=var, font=("Arial", 12)).pack()
 
-        # Przycisk Dalej
-        tk.Button(root, text="Dalej", font=("Arial", 14), command=self.next_question).pack(pady=20)
+        # Przycisk Wstecz i Dalej
+        button_frame = tk.Frame(root)
+        button_frame.pack(pady=20)
+
+        tk.Button(button_frame, text="Wstecz", font=("Arial", 14), command=lambda: previous_window(self.root)).pack(side="left", padx=10)
+        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right", padx=10)
 
     def next_question(self):
         responses = {q: v.get() for q, v in self.values.items()}

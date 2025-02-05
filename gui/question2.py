@@ -1,11 +1,19 @@
 import tkinter as tk
 from gui.question3 import Question3
 
+def previous_window(root):
+    """Cofa do poprzedniego pytania"""
+    root.destroy()
+    from gui.question1 import Question1  # Opóźniony import (rozwiązuje circular import)
+    new_root = tk.Tk()
+    app = Question1(new_root)
+    new_root.mainloop()
+
 class Question2:
     def __init__(self, root):
         self.root = root
-        self.root.title("Pytanie 2 - Czynniki stylu życia")
-        self.root.geometry("600x900")
+        self.root.title("Alzheimer Predictor")
+        self.root.geometry("600x700")
 
         # Tytuł sekcji
         tk.Label(root, text="Styl życia", font=("Arial", 16, "bold")).pack(pady=10)
@@ -52,8 +60,12 @@ class Question2:
         tk.Label(root, text="*jednostka alkoholu = 10 g czystego alkoholu, czyli ok. 500 ml piwa, 125 ml wina, 40ml wódki",
                  font=("Arial", 10), fg="gray").pack(pady=10)
 
-        # Przycisk Dalej
-        tk.Button(root, text="Dalej", font=("Arial", 14), command=self.next_question).pack(pady=20)
+        # Przycisk Wstecz i Dalej
+        button_frame = tk.Frame(root)
+        button_frame.pack(pady=20)
+
+        tk.Button(button_frame, text="Wstecz", font=("Arial", 14), command=lambda: previous_window(self.root)).pack(side="left", padx=10)
+        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right", padx=10)
 
     def next_question(self):
         bmi = self.bmi_var.get()
@@ -62,8 +74,6 @@ class Question2:
         physical = self.physical_var.get()
         diet = self.diet_var.get()
         sleep = self.sleep_var.get()
-        print(
-            f"BMI: {bmi}, Palenie: {smoking}, Alkohol: {alcohol}, Aktywność fizyczna: {physical}, Dieta: {diet}, Sen: {sleep}")  # Można zapisać te wartości lub przekazać dalej
         self.root.destroy()
         # Otwórz kolejne pytanie
         root = tk.Tk()
