@@ -1,11 +1,12 @@
 import tkinter as tk
 from gui.question2 import Question2
 
+
 class Question1:
     def __init__(self, root):
         self.root = root
-        self.root.title("Pytanie 1")
-        self.root.geometry("600x800")
+        self.root.title("Alzheimer Predictor")
+        self.root.geometry("600x700")
 
         # Tytuł sekcji
         tk.Label(root, text="Dane demograficzne", font=("Arial", 16, "bold")).pack(pady=10)
@@ -44,8 +45,14 @@ class Question1:
         tk.Radiobutton(root, text="Wyższe Magisterskie lub powyżej", variable=self.education_var, value=3,
                        font=("Arial", 12)).pack()
 
-        # Przycisk Dalej
-        tk.Button(root, text="Dalej", font=("Arial", 14), command=self.next_question).pack(pady=20)
+        # Przycisk Wstecz i Dalej
+        button_frame = tk.Frame(root)
+        button_frame.pack(pady=20)
+
+        tk.Button(button_frame, text="Wstecz", font=("Arial", 14), command=self.previous_window).pack(side="left",
+                                                                                                      padx=10)
+        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right",
+                                                                                                   padx=10)
 
     def next_question(self):
         """Zapisuje dane i przechodzi do Question2"""
@@ -54,11 +61,18 @@ class Question1:
         ethnicity = self.ethnicity_var.get()
         education = self.education_var.get()
 
-        print(f"Płeć: {sex}, Wiek: {age}, Pochodzenie etniczne: {ethnicity}, Wykształcenie: {education}")
-
         self.root.destroy()  # Zamykamy bieżące okno
 
         # Otwieramy kolejne pytanie
         root = tk.Tk()
         app = Question2(root)
+        root.mainloop()
+
+    def previous_window(self):
+        """Cofa do ekranu głównego"""
+        self.root.destroy()
+
+        from gui.main_window import MainWindow  # Opóźniony import (rozwiązuje circular import)
+        root = tk.Tk()
+        app = MainWindow(root)
         root.mainloop()
