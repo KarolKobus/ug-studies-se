@@ -1,4 +1,5 @@
 import os
+import sys
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
@@ -12,13 +13,19 @@ class MainWindow:
         self.root.geometry("600x400")
         self.root.resizable(False, False)
 
-        # Pobranie ścieżki do katalogu projektu
-        base_path = os.path.dirname(os.path.abspath(__file__))  # Katalog 'gui'
-        image_path = os.path.join(base_path, "..", "assets", "logo.png")  # Przechodzimy do głównego katalogu
+        # Funkcja do poprawiania ścieżek
+        def resource_path(relative_path):
+            """ Naprawia ścieżkę w przypadku uruchamiania jako .exe """
+            if hasattr(sys, '_MEIPASS'):
+                return os.path.join(sys._MEIPASS, relative_path)
+            return os.path.join(os.path.abspath("."), relative_path)
+
+        # Pobranie poprawnej ścieżki do obrazka
+        image_path = resource_path("assets/logo.png")
 
         try:
             image = Image.open(image_path)
-            image = image.resize((200, 200), Image.LANCZOS)  # Zamiana ANTIALIAS na LANCZOS
+            image = image.resize((200, 200), Image.LANCZOS)
             self.logo = ImageTk.PhotoImage(image)
             img_label = tk.Label(root, image=self.logo)
             img_label.pack(pady=10)
