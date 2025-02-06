@@ -28,114 +28,67 @@ else:
 #---------------Wczytanie zbiorów----------------------------#
 X_train, X_test, y_train, y_test = joblib.load("dataset.pkl")
 
-#--------------MODEL REGRESJI LOGISTYCZNEJ-------------------#
-log_reg_classifier = LogisticRegression(random_state=10)
+#---------------Ocena różnych modeli klasyfikacyjnych--------#
 
-# Dopasowanie modelu regresji logistycznej do zbioru treningowego
-log_reg_classifier.fit(X_train, y_train)
+# Lista modeli do oceny
+models = {
+    "Regresja logistyczna": LogisticRegression(random_state=10),
+    "KNN": KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2),
+    "SVM": SVC(kernel='linear', random_state=10),
+    "Kernel SVM": SVC(kernel='rbf', random_state=10),
+    "Drzewo decyzyjne": DecisionTreeClassifier(criterion='entropy', random_state=10),
+    "Las losowy": RandomForestClassifier(n_estimators=10, criterion='entropy', random_state=10),
+    "XGBoost": XGBClassifier()
+}
 
-# Tworzenie macierzy pomyłek (confusion matrix)
-y_pred_log_reg = log_reg_classifier.predict(X_test)
-log_reg_cm = confusion_matrix(y_test, y_pred_log_reg)
-print(round(accuracy_score(y_test, y_pred_log_reg) * 100, 2))
+# Tworzenie pustej listy do przechowywania wyników
+results = []
 
-# Zastosowanie walidacji krzyżowej (k-fold cross validation)
-log_reg_accuracies = cross_val_score(estimator=log_reg_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu regresji logistycznej: {:.2f} %".format(log_reg_accuracies.mean() * 100))
-print("Odchylenie standardowe (regresja logistyczna): {:.2f} %".format(log_reg_accuracies.std() * 100))
+# Iteracja przez modele
+for model_name, model in models.items():
+    # Dopasowanie modelu
+    model.fit(X_train, y_train)
+    
+    # Predykcja na zbiorze testowym
+    y_pred = model.predict(X_test)
+    accuracy = round(accuracy_score(y_test, y_pred) * 100, 2)
+    
+    # Walidacja krzyżowa
+    cross_val_accuracies = cross_val_score(estimator=model, X=X_train, y=y_train, cv=10)
+    cross_val_mean = round(cross_val_accuracies.mean() * 100, 2)
+    cross_val_std = round(cross_val_accuracies.std() * 100, 2)
+    
+    # Dodanie wyników do listy
+    results.append([model_name, accuracy, cross_val_mean, cross_val_std])
 
-#--------------MODEL K-NAJBLISZYCH SASIADÓW-------------------#
-knn_classifier = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
+# Konwersja wyników do DataFrame
+df_results = pd.DataFrame(results, columns=["Model", "Accuracy", "CrossVal Mean", "CrossVal Std"])
 
-# Dopasowanie modelu k-najbliższych sąsiadów do zbioru treningowego
-knn_classifier.fit(X_train, y_train)
+# Sortowanie według kryteriów
+sorted_df = df_results.sort_values(by=["CrossVal Mean", "CrossVal Std", "Accuracy"], 
+                                   ascending=[False, True, False],ignore_index=True)
 
-# Tworzenie macierzy pomyłek
-y_pred_knn = knn_classifier.predict(X_test)
-knn_cm = confusion_matrix(y_test, y_pred_knn)
-print(round(accuracy_score(y_test, y_pred_knn) * 100, 2))
+# Połączenie pełnego zbioru danych
+X = np.vstack((X_train, X_test))  # Łączenie wierszy dla cech
+y = np.hstack((y_train, y_test))  # Łączenie wierszy dla etykiet
 
-# Zastosowanie walidacji krzyżowej
-knn_accuracies = cross_val_score(estimator=knn_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu k-najbliższych sąsiadów: {:.2f} %".format(knn_accuracies.mean() * 100))
-print("Odchylenie standardowe (k-najbliżsi sąsiedzi): {:.2f} %".format(knn_accuracies.std() * 100))
+# Pobranie nazwy najlepszego modelu
+final_model = sorted_df.iloc[0]["Model"]
 
-#--------------MODEL SVM (support vector machine)-------------------#
-svm_classifier = SVC(kernel='linear', random_state=10)
+# Pobranie instancji modelu z oryginalnego słownika
+best_model_instance = models[final_model]
 
-# Dopasowanie modelu SVM do zbioru treningowego
-svm_classifier.fit(X_train, y_train)
+# Trenowanie modelu na pełnym zbiorze treningowym
+best_model_instance.fit(X, y)
 
-# Tworzenie macierzy pomyłek
-y_pred_svm = svm_classifier.predict(X_test)
-svm_cm = confusion_matrix(y_test, y_pred_svm)
-print(round(accuracy_score(y_test, y_pred_svm) * 100, 2))
+#------------------Zapisujemy model do pliku .pkl---------------------------------#
+model_file_path = os.path.join(script_dir, "best_model.pkl")
 
-# Zastosowanie walidacji krzyżowej
-svm_accuracies = cross_val_score(estimator=svm_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu SVM: {:.2f} %".format(svm_accuracies.mean() * 100))
-print("Odchylenie standardowe (SVM): {:.2f} %".format(svm_accuracies.std() * 100))
+joblib.dump(best_model_instance, model_file_path)
 
-#--------------MODEL KERNEL SVM-------------------#
-k_svm_classifier = SVC(kernel='rbf', random_state=10)
+print(f"Zapisano plik: {model_file_path}")
 
-# Dopasowanie modelu kernel SVM do zbioru treningowego
-k_svm_classifier.fit(X_train, y_train)
-
-# Tworzenie macierzy pomyłek
-y_pred_k_svm = k_svm_classifier.predict(X_test)
-k_svm_cm = confusion_matrix(y_test, y_pred_k_svm)
-print(round(accuracy_score(y_test, y_pred_k_svm) * 100, 2))
-
-# Zastosowanie walidacji krzyżowej
-k_svm_accuracies = cross_val_score(estimator=k_svm_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu kernel SVM: {:.2f} %".format(k_svm_accuracies.mean() * 100))
-print("Odchylenie standardowe (kernel SVM): {:.2f} %".format(k_svm_accuracies.std() * 100))
-
-#--------------MODEL DRZEWA KLASYFIKACYJNEGO-------------------#
-dt_classifier = DecisionTreeClassifier(criterion='entropy', random_state=10)
-
-# Dopasowanie modelu drzewa decyzyjnego do zbioru treningowego
-dt_classifier.fit(X_train, y_train)
-
-# Tworzenie macierzy pomyłek
-y_pred_dt = dt_classifier.predict(X_test)
-dt_cm = confusion_matrix(y_test, y_pred_dt)
-print(round(accuracy_score(y_test, y_pred_dt) * 100, 2))
-
-# Zastosowanie walidacji krzyżowej
-dt_accuracies = cross_val_score(estimator=dt_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu drzewa decyzyjnego: {:.2f} %".format(dt_accuracies.mean() * 100))
-print("Odchylenie standardowe (drzewo decyzyjne): {:.2f} %".format(dt_accuracies.std() * 100))
-
-#--------------MODEL LASU LOSOWEGO-------------------#
-rf_classifier = RandomForestClassifier(n_estimators=10, criterion='entropy', random_state=10)
-
-# Dopasowanie modelu lasu losowego do zbioru treningowego
-rf_classifier.fit(X_train, y_train)
-
-# Tworzenie macierzy pomyłek
-y_pred_rf = rf_classifier.predict(X_test)
-rf_cm = confusion_matrix(y_test, y_pred_rf)
-print(round(accuracy_score(y_test, y_pred_rf) * 100, 2))
-
-# Zastosowanie walidacji krzyżowej
-rf_accuracies = cross_val_score(estimator=rf_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu lasu losowego: {:.2f} %".format(rf_accuracies.mean() * 100))
-print("Odchylenie standardowe (las losowy): {:.2f} %".format(rf_accuracies.std() * 100))
-
-#--------------MODEL XGBOOST-------------------#
-xgb_classifier = XGBClassifier()
-
-# Dopasowanie modelu XGBoost do zbioru treningowego
-xgb_classifier.fit(X_train, y_train)
-
-# Tworzenie macierzy pomyłek
-y_pred_xgb = xgb_classifier.predict(X_test)
-xgb_cm = confusion_matrix(y_test, y_pred_xgb)
-print(round(accuracy_score(y_test, y_pred_xgb) * 100, 2))
-
-# Zastosowanie walidacji krzyżowej
-xgb_accuracies = cross_val_score(estimator=xgb_classifier, X=X_train, y=y_train, cv=10)
-print("Dokładność modelu XGBoost: {:.2f} %".format(xgb_accuracies.mean() * 100))
-print("Odchylenie standardowe (XGBoost): {:.2f} %".format(xgb_accuracies.std() * 100))
+if os.path.exists(model_file_path):
+    print("Plik best_model.pkl został pomyślnie zapisany!")
+else:
+    print("Błąd: plik best_model.pkl nie został znaleziony po zapisie!")
