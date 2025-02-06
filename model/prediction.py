@@ -5,26 +5,24 @@ import sys
 
 
 def load_model_and_scaler():
-    """ Wczytuje zapisany model oraz skaler """
-    # Pobranie katalogu, w którym znajduje się ten skrypt
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    """ Wczytuje model i skaler, uwzględniając środowisko PyInstaller """
+    if getattr(sys, 'frozen', False):  # Jeśli uruchomiono jako .exe
+        base_path = os.path.join(sys._MEIPASS, "model")
+    else:  # Uruchomienie w PyCharm
+        base_path = os.path.dirname(os.path.abspath(__file__))
 
-    # Ścieżki do plików pkl w tym samym folderze co skrypt
-    model_path = os.path.join(script_dir, "best_model.pkl")
-    scaler_path = os.path.join(script_dir, "scalar.pkl")
+    model_path = os.path.join(base_path, "best_model.pkl")
+    scaler_path = os.path.join(base_path, "scalar.pkl")
 
-    # Sprawdzenie, czy pliki istnieją
+    print(f"DEBUG - Ścieżka modelu: {model_path}")
+    print(f"DEBUG - Ścieżka skalera: {scaler_path}")
+
     if not os.path.exists(model_path):
-        print(f"Plik modelu nie istnieje: {model_path}")
+        print(f"Błąd: Plik modelu nie istnieje: {model_path}")
         return None, None
-    else:
-        print(f"Odczyt modelu z: {model_path}")
-
     if not os.path.exists(scaler_path):
-        print(f"Plik skalera nie istnieje: {scaler_path}")
+        print(f"Błąd: Plik skalera nie istnieje: {scaler_path}")
         return None, None
-    else:
-        print(f"Odczyt skalera z: {scaler_path}")
 
     model = joblib.load(model_path)
     scaler = joblib.load(scaler_path)
