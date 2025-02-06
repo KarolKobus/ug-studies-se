@@ -1,7 +1,6 @@
 import tkinter as tk
 from gui.question5 import Question5
 
-
 def previous_window(root, responses):
     """Cofa do poprzedniego pytania"""
     root.destroy()
@@ -9,7 +8,6 @@ def previous_window(root, responses):
     new_root = tk.Tk()
     app = Question3(new_root, responses)
     new_root.mainloop()
-
 
 class Question4:
     def __init__(self, root, responses):
@@ -26,20 +24,20 @@ class Question4:
 
         # Pomiary kliniczne z suwakami
         self.measurements = {
-            "Ciśnienie skurczowe (mmHg)": (90, 180),
-            "Ciśnienie rozkurczowe (mmHg)": (60, 120),
-            "Cholesterol całkowity (mg/dL)": (150, 300),
-            "Cholesterol LDL (mg/dL)": (50, 200),
-            "Cholesterol HDL (mg/dL)": (20, 100),
-            "Trójglicerydy (mg/dL)": (50, 400)
+            "SystolicBP": ("Proszę podać swoje ciśnienie skurczowe (mmHg)", 90, 180),
+            "DiastolicBP": ("Proszę podać swoje ciśnienie rozkurczowe (mmHg)", 60, 120),
+            "CholesterolTotal": ("Proszę podać całkowity poziom cholesterolu (mg/dL)", 150, 300),
+            "CholesterolLDL": ("Proszę podać poziom cholesterolu LDL (mg/dL)", 50, 200),
+            "CholesterolHDL": ("Proszę podać poziom cholesterolu HDL (mg/dL)", 20, 100),
+            "CholesterolTriglycerides": ("Proszę podać poziom trójglicerydów (mg/dL)", 50, 400)
         }
 
         self.values = {}
 
-        for label, (min_val, max_val) in self.measurements.items():
-            tk.Label(root, text=label, font=("Arial", 14)).pack(pady=5)
+        for key, (label_text, min_val, max_val) in self.measurements.items():
+            tk.Label(root, text=label_text, font=("Arial", 14)).pack(pady=5)
             var = tk.IntVar(value=min_val)
-            self.values[label] = var
+            self.values[key] = var
             tk.Scale(root, from_=min_val, to=max_val, orient="horizontal", variable=var, font=("Arial", 12)).pack()
 
         # Przycisk Wstecz i Dalej

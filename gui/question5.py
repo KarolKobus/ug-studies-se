@@ -1,7 +1,6 @@
 import tkinter as tk
 from gui.question6 import Question6
 
-
 def previous_window(root, responses):
     """Cofa do poprzedniego pytania"""
     root.destroy()
@@ -9,7 +8,6 @@ def previous_window(root, responses):
     new_root = tk.Tk()
     app = Question4(new_root, responses)
     new_root.mainloop()
-
 
 class Question5:
     def __init__(self, root, responses):
@@ -26,32 +24,32 @@ class Question5:
 
         # Skale ocen
         self.scales = {
-            "MMSE (0-30)": (0, 30),
-            "Ocena funkcjonalna (0-10)": (0, 10),
-            "Wynik ADL (skala Podstawowych Czynności Życia Codziennego, 0-10)": (0, 10)
+            "MMSE": ("Proszę podać wynik MMSE (0-30)", 0, 30),
+            "FunctionalAssessment": ("Proszę podać ocenę funkcjonalną (0-10)", 0, 10),
+            "ADL": ("Proszę podać wynik ADL - codzienne funkcjonowanie (0-10)", 0, 10)
         }
 
         self.values = {}
 
-        for label, (min_val, max_val) in self.scales.items():
-            tk.Label(root, text=label, font=("Arial", 14)).pack(pady=5)
+        for key, (label_text, min_val, max_val) in self.scales.items():
+            tk.Label(root, text=label_text, font=("Arial", 14)).pack(pady=5)
             var = tk.IntVar(value=min_val)
-            self.values[label] = var
+            self.values[key] = var
             tk.Scale(root, from_=min_val, to=max_val, orient="horizontal", variable=var, font=("Arial", 12)).pack()
 
         # Pytania binarne
         self.binary_questions = {
-            "Czy masz problemy z pamięcią?": "memory_complaints",
-            "Czy występują problemy behawioralne?": "behavioral_problems"
+            "MemoryComplaints": "Czy masz problemy z pamięcią?",
+            "BehavioralProblems": "Czy występują problemy behawioralne?"
         }
 
         self.binary_values = {}
 
-        for question, var_name in self.binary_questions.items():
-            tk.Label(root, text=question, font=("Arial", 14)).pack(pady=5)
-            self.binary_values[var_name] = tk.IntVar()
-            tk.Radiobutton(root, text="Nie", variable=self.binary_values[var_name], value=0, font=("Arial", 12)).pack()
-            tk.Radiobutton(root, text="Tak", variable=self.binary_values[var_name], value=1, font=("Arial", 12)).pack()
+        for key, label_text in self.binary_questions.items():
+            tk.Label(root, text=label_text, font=("Arial", 14)).pack(pady=5)
+            self.binary_values[key] = tk.IntVar()
+            tk.Radiobutton(root, text="Nie", variable=self.binary_values[key], value=0, font=("Arial", 12)).pack()
+            tk.Radiobutton(root, text="Tak", variable=self.binary_values[key], value=1, font=("Arial", 12)).pack()
 
         # Przycisk Wstecz i Dalej
         button_frame = tk.Frame(root)

@@ -21,11 +21,11 @@ class Question6:
 
         # Pytania binarne dotyczące objawów
         self.symptoms = {
-            "Czy występuje stan zmieszania/zagubienia?": "confusion",
-            "Czy występuje dezorientacja?": "disorientation",
-            "Czy występują zmiany osobowości?": "personality_changes",
-            "Czy masz trudności z wykonywaniem zadań?": "difficulty_completing_tasks",
-            "Czy masz problemy z zapominaniem?": "forgetfulness"
+            "Czy występuje stan zmieszania/zagubienia?": "Confusion",
+            "Czy występuje dezorientacja?": "Disorientation",
+            "Czy występują zmiany osobowości?": "PersonalityChanges",
+            "Czy masz trudności z wykonywaniem zadań?": "DifficultyCompletingTasks",
+            "Czy masz problemy z zapominaniem?": "Forgetfulness"
         }
 
         self.answers = {}
