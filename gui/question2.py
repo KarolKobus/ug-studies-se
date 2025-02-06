@@ -1,19 +1,22 @@
 import tkinter as tk
 from gui.question3 import Question3
 
-def previous_window(root):
+
+def previous_window(root, responses):
     """Cofa do poprzedniego pytania"""
     root.destroy()
     from gui.question1 import Question1  # Opóźniony import (rozwiązuje circular import)
     new_root = tk.Tk()
-    app = Question1(new_root)
+    app = Question1(new_root, responses)
     new_root.mainloop()
 
+
 class Question2:
-    def __init__(self, root):
+    def __init__(self, root, responses):
         self.root = root
         self.root.title("Alzheimer Predictor")
         self.root.geometry("600x700")
+        self.responses = responses  # Przechowywanie odpowiedzi z poprzedniego pytania
 
         # Tytuł sekcji
         tk.Label(root, text="Styl życia", font=("Arial", 16, "bold")).pack(pady=10)
@@ -32,14 +35,16 @@ class Question2:
         tk.Radiobutton(root, text="Tak", variable=self.smoking_var, value=1, font=("Arial", 12)).pack()
 
         # Alkohol
-        tk.Label(root, text="3. Jakie jest Twoje tygodniowe spożycie alkoholu (w jednostkach):", font=("Arial", 14)).pack(pady=5)
+        tk.Label(root, text="3. Jakie jest Twoje tygodniowe spożycie alkoholu (w jednostkach):",
+                 font=("Arial", 14)).pack(pady=5)
         self.alcohol_var = tk.IntVar(value=0)
         self.alcohol_slider = tk.Scale(root, from_=0, to=20, orient="horizontal", variable=self.alcohol_var,
                                        font=("Arial", 12))
         self.alcohol_slider.pack()
 
         # Aktywność fizyczna
-        tk.Label(root, text="4. Jaka jest Twoja tygodniowa aktywność fizyczna (w godzinach):", font=("Arial", 14)).pack(pady=5)
+        tk.Label(root, text="4. Jaka jest Twoja tygodniowa aktywność fizyczna (w godzinach):", font=("Arial", 14)).pack(
+            pady=5)
         self.physical_var = tk.StringVar()
         self.physical_dropdown = tk.OptionMenu(root, self.physical_var, *[str(i) for i in range(11)])
         self.physical_dropdown.pack()
@@ -57,25 +62,29 @@ class Question2:
         self.sleep_dropdown.pack()
 
         # Przypis dotyczący jednostek alkoholu
-        tk.Label(root, text="*jednostka alkoholu = 10 g czystego alkoholu, czyli ok. 500 ml piwa, 125 ml wina, 40ml wódki",
+        tk.Label(root,
+                 text="*jednostka alkoholu = 10 g czystego alkoholu, czyli ok. 500 ml piwa, 125 ml wina, 40ml wódki",
                  font=("Arial", 10), fg="gray").pack(pady=10)
 
         # Przycisk Wstecz i Dalej
         button_frame = tk.Frame(root)
         button_frame.pack(pady=20)
 
-        tk.Button(button_frame, text="Wstecz", font=("Arial", 14), command=lambda: previous_window(self.root)).pack(side="left", padx=10)
-        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right", padx=10)
+        tk.Button(button_frame, text="Wstecz", font=("Arial", 14),
+                  command=lambda: previous_window(self.root, self.responses)).pack(side="left", padx=10)
+        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right",
+                                                                                                   padx=10)
 
     def next_question(self):
-        bmi = self.bmi_var.get()
-        smoking = self.smoking_var.get()
-        alcohol = self.alcohol_var.get()
-        physical = self.physical_var.get()
-        diet = self.diet_var.get()
-        sleep = self.sleep_var.get()
+        self.responses["bmi"] = self.bmi_var.get()
+        self.responses["smoking"] = self.smoking_var.get()
+        self.responses["alcohol"] = self.alcohol_var.get()
+        self.responses["physical_activity"] = self.physical_var.get()
+        self.responses["diet_quality"] = self.diet_var.get()
+        self.responses["sleep_quality"] = self.sleep_var.get()
+
         self.root.destroy()
         # Otwórz kolejne pytanie
         root = tk.Tk()
-        app = Question3(root)
+        app = Question3(root, self.responses)
         root.mainloop()
