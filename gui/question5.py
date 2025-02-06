@@ -1,19 +1,22 @@
 import tkinter as tk
 from gui.question6 import Question6
 
-def previous_window(root):
+
+def previous_window(root, responses):
     """Cofa do poprzedniego pytania"""
     root.destroy()
     from gui.question4 import Question4  # Opóźniony import (rozwiązuje circular import)
     new_root = tk.Tk()
-    app = Question4(new_root)
+    app = Question4(new_root, responses)
     new_root.mainloop()
 
+
 class Question5:
-    def __init__(self, root):
+    def __init__(self, root, responses):
         self.root = root
         self.root.title("Alzheimer Predictor")
         self.root.geometry("600x700")
+        self.responses = responses  # Przechowywanie odpowiedzi z poprzedniego pytania
 
         # Tytuł sekcji
         tk.Label(root, text="Oceny poznawcze i funkcjonalne", font=("Arial", 16, "bold")).pack(pady=10)
@@ -54,16 +57,19 @@ class Question5:
         button_frame = tk.Frame(root)
         button_frame.pack(pady=20)
 
-        tk.Button(button_frame, text="Wstecz", font=("Arial", 14), command=lambda: previous_window(self.root)).pack(side="left", padx=10)
-        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right", padx=10)
+        tk.Button(button_frame, text="Wstecz", font=("Arial", 14),
+                  command=lambda: previous_window(self.root, self.responses)).pack(side="left", padx=10)
+        tk.Button(button_frame, text="Dalej", font=("Arial", 14), command=self.next_question).pack(side="right",
+                                                                                                   padx=10)
 
     def next_question(self):
-        responses = {q: v.get() for q, v in self.values.items()}
-        binary_responses = {q: v.get() for q, v in self.binary_values.items()}
-        responses.update(binary_responses)
-        print(responses)  # Można zapisać te wartości lub przekazać dalej
+        for q, v in self.values.items():
+            self.responses[q] = v.get()
+        for q, v in self.binary_values.items():
+            self.responses[q] = v.get()
+
         self.root.destroy()
         # Otwórz kolejne pytanie
         root = tk.Tk()
-        app = Question6(root)
+        app = Question6(root, self.responses)
         root.mainloop()
