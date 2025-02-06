@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('assets/logo.png', 'assets/'), ('model/best_model.pkl', 'model/'), ('model/scalar.pkl', 'model/')],
+    datas=[('assets/logo.png', 'assets'), ('model/best_model.pkl', 'model'), ('model/scalar.pkl', 'model')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['C:\\Users\\wrons\\ug-studies-se\\assets\\icon.ico'],
+    icon=['assets\\icon.ico'],
 )
