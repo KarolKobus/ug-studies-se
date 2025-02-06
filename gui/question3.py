@@ -23,12 +23,12 @@ class Question3:
 
         # Lista pytań binarnych
         self.questions = {
-            "Czy w rodzinie występowała choroba Alzheimera?": "family_history",
-            "Czy masz chorobę sercowo-naczyniową?": "cardiovascular_disease",
-            "Czy masz cukrzycę?": "diabetes",
-            "Czy masz depresję?": "depression",
-            "Czy doznałeś kiedyś urazu głowy?": "head_injury",
-            "Czy masz nadciśnienie?": "hypertension"
+            "Czy w rodzinie występowała choroba Alzheimera?": "FamilyHistoryAlzheimers",
+            "Czy masz chorobę sercowo-naczyniową?": "CardiovascularDisease",
+            "Czy masz cukrzycę?": "Diabetes",
+            "Czy masz depresję?": "Depression",
+            "Czy doznałeś kiedyś urazu głowy?": "HeadInjury",
+            "Czy masz nadciśnienie?": "Hypertension"
         }
 
         self.answers = {}

@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 from gui.question3 import Question3
 
 
@@ -45,19 +46,19 @@ class Question2:
         # Aktywność fizyczna
         tk.Label(root, text="4. Jaka jest Twoja tygodniowa aktywność fizyczna (w godzinach):", font=("Arial", 14)).pack(
             pady=5)
-        self.physical_var = tk.StringVar()
+        self.physical_var = tk.StringVar(value="")
         self.physical_dropdown = tk.OptionMenu(root, self.physical_var, *[str(i) for i in range(11)])
         self.physical_dropdown.pack()
 
         # Jakość diety
         tk.Label(root, text="5. Jak oceniasz jakość swojej diety? (0-10):", font=("Arial", 14)).pack(pady=5)
-        self.diet_var = tk.StringVar()
+        self.diet_var = tk.StringVar(value="")
         self.diet_dropdown = tk.OptionMenu(root, self.diet_var, *[str(i) for i in range(11)])
         self.diet_dropdown.pack()
 
         # Jakość snu
         tk.Label(root, text="6. Jak oceniasz swój sen? (4-10):", font=("Arial", 14)).pack(pady=5)
-        self.sleep_var = tk.StringVar()
+        self.sleep_var = tk.StringVar(value="")
         self.sleep_dropdown = tk.OptionMenu(root, self.sleep_var, *[str(i) for i in range(4, 11)])
         self.sleep_dropdown.pack()
 
@@ -76,12 +77,17 @@ class Question2:
                                                                                                    padx=10)
 
     def next_question(self):
-        self.responses["bmi"] = self.bmi_var.get()
-        self.responses["smoking"] = self.smoking_var.get()
-        self.responses["alcohol"] = self.alcohol_var.get()
-        self.responses["physical_activity"] = self.physical_var.get()
-        self.responses["diet_quality"] = self.diet_var.get()
-        self.responses["sleep_quality"] = self.sleep_var.get()
+        if not self.physical_var.get() or not self.diet_var.get() or not self.sleep_var.get():
+            messagebox.showwarning("Błąd",
+                                   "Proszę wybrać wartość dla aktywności fizycznej, jakości diety i jakości snu.")
+            return
+
+        self.responses["BMI"] = self.bmi_var.get()
+        self.responses["Smoking"] = self.smoking_var.get()
+        self.responses["AlcoholConsumption"] = self.alcohol_var.get()
+        self.responses["PhysicalActivity"] = self.physical_var.get()
+        self.responses["DietQuality"] = self.diet_var.get()
+        self.responses["SleepQuality"] = self.sleep_var.get()
 
         self.root.destroy()
         # Otwórz kolejne pytanie
