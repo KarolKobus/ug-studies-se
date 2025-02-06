@@ -53,10 +53,10 @@ class Question1:
 
     def next_question(self):
         """Zapisuje dane i przechodzi do Question2"""
-        self.responses["sex"] = self.sex_var.get()
-        self.responses["age"] = self.age_var.get()
-        self.responses["ethnicity"] = self.ethnicity_var.get()
-        self.responses["education"] = self.education_var.get()
+        self.responses["Sex"] = self.sex_var.get()
+        self.responses["Age"] = self.age_var.get()
+        self.responses["Ethnicity"] = self.ethnicity_var.get()
+        self.responses["EducationLevel"] = self.education_var.get()
 
         self.root.destroy()  # Zamykamy bieżące okno
 
