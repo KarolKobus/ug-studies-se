@@ -224,6 +224,8 @@
   ('PIL.features',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\PIL\\features.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('PyInstaller',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\PyInstaller\\__init__.py',
    'PYMODULE'),
@@ -293,6 +295,7 @@
   ('PyInstaller.utils.win32.versioninfo',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\PyInstaller\\utils\\win32\\versioninfo.py',
    'PYMODULE'),
+>>>>>>> gui
   ('__future__',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\__future__.py',
    'PYMODULE'),
@@ -314,6 +317,8 @@
   ('_pydecimal',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_pydecimal.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('_pytest',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\_pytest\\__init__.py',
    'PYMODULE'),
@@ -521,12 +526,15 @@
   ('_sitebuiltins',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_sitebuiltins.py',
    'PYMODULE'),
+>>>>>>> gui
   ('_strptime',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_strptime.py',
    'PYMODULE'),
   ('_threading_local',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_threading_local.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('altgraph',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\altgraph\\__init__.py',
    'PYMODULE'),
@@ -539,6 +547,7 @@
   ('altgraph.ObjectGraph',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\altgraph\\ObjectGraph.py',
    'PYMODULE'),
+>>>>>>> gui
   ('argparse',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\argparse.py',
    'PYMODULE'),
@@ -659,6 +668,8 @@
   ('codeop',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\codeop.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('colorama',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\colorama\\__init__.py',
    'PYMODULE'),
@@ -677,6 +688,7 @@
   ('colorama.winterm',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\colorama\\winterm.py',
    'PYMODULE'),
+>>>>>>> gui
   ('colorsys',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\colorsys.py',
    'PYMODULE'),
@@ -695,9 +707,12 @@
   ('concurrent.futures.thread',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\concurrent\\futures\\thread.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('configparser',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\configparser.py',
    'PYMODULE'),
+>>>>>>> gui
   ('contextlib',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\contextlib.py',
    'PYMODULE'),
@@ -737,18 +752,23 @@
   ('ctypes.wintypes',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\ctypes\\wintypes.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('curses',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\curses\\__init__.py',
    'PYMODULE'),
   ('curses.has_key',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\curses\\has_key.py',
    'PYMODULE'),
+>>>>>>> gui
   ('dataclasses',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\dataclasses.py',
    'PYMODULE'),
   ('datetime',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\datetime.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('dateutil',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\dateutil\\__init__.py',
    'PYMODULE'),
@@ -794,6 +814,7 @@
   ('dateutil.zoneinfo',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\dateutil\\zoneinfo\\__init__.py',
    'PYMODULE'),
+>>>>>>> gui
   ('decimal',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\decimal.py',
    'PYMODULE'),
@@ -866,6 +887,8 @@
   ('email.utils',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\email\\utils.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('exceptiongroup',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\exceptiongroup\\__init__.py',
    'PYMODULE'),
@@ -884,6 +907,7 @@
   ('exceptiongroup._version',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\exceptiongroup\\_version.py',
    'PYMODULE'),
+>>>>>>> gui
   ('fileinput',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\fileinput.py',
    'PYMODULE'),
@@ -958,27 +982,36 @@
   ('http.server',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\http\\server.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('imp',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\imp.py',
    'PYMODULE'),
+>>>>>>> gui
   ('importlib',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\__init__.py',
    'PYMODULE'),
   ('importlib._abc',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\_abc.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('importlib._adapters',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\_adapters.py',
    'PYMODULE'),
+>>>>>>> gui
   ('importlib._bootstrap',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\_bootstrap.py',
    'PYMODULE'),
   ('importlib._bootstrap_external',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\_bootstrap_external.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('importlib._common',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\_common.py',
    'PYMODULE'),
+>>>>>>> gui
   ('importlib.abc',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\abc.py',
    'PYMODULE'),
@@ -1009,6 +1042,14 @@
   ('importlib.readers',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\readers.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('importlib.util',
+   'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('inspect',
+   'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\inspect.py',
+   'PYMODULE'),
+=======
   ('importlib.resources',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\resources.py',
    'PYMODULE'),
@@ -1096,6 +1137,7 @@
   ('jinja2.visitor',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\jinja2\\visitor.py',
    'PYMODULE'),
+>>>>>>> gui
   ('joblib',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\joblib\\__init__.py',
    'PYMODULE'),
@@ -1246,12 +1288,15 @@
   ('lzma',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\lzma.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('markupsafe',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\markupsafe\\__init__.py',
    'PYMODULE'),
   ('markupsafe._native',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\markupsafe\\_native.py',
    'PYMODULE'),
+>>>>>>> gui
   ('mimetypes',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\mimetypes.py',
    'PYMODULE'),
@@ -1346,9 +1391,12 @@
   ('numpy._array_api_info',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_array_api_info.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy._configtool',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_configtool.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy._core',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_core\\__init__.py',
    'PYMODULE'),
@@ -1391,9 +1439,12 @@
   ('numpy._core.arrayprint',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_core\\arrayprint.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy._core.cversions',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_core\\cversions.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy._core.defchararray',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_core\\defchararray.py',
    'PYMODULE'),
@@ -1448,6 +1499,8 @@
   ('numpy._globals',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_globals.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy._pyinstaller',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_pyinstaller\\__init__.py',
    'PYMODULE'),
@@ -1463,6 +1516,7 @@
   ('numpy._pyinstaller.tests.test_pyinstaller',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_pyinstaller\\tests\\test_pyinstaller.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy._pytesttester',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_pytesttester.py',
    'PYMODULE'),
@@ -1481,12 +1535,21 @@
   ('numpy._typing._dtype_like',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_dtype_like.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('numpy._typing._nbit',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_nbit.py',
+   'PYMODULE'),
+  ('numpy._typing._nbit_base',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_nbit_base.py',
+   'PYMODULE'),
+=======
   ('numpy._typing._extended_precision',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_extended_precision.py',
    'PYMODULE'),
   ('numpy._typing._nbit',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_nbit.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy._typing._nested_sequence',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_nested_sequence.py',
    'PYMODULE'),
@@ -1496,6 +1559,12 @@
   ('numpy._typing._shape',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_shape.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('numpy._typing._ufunc',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_typing\\_ufunc.py',
+   'PYMODULE'),
+=======
+>>>>>>> gui
   ('numpy._utils',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_utils\\__init__.py',
    'PYMODULE'),
@@ -1505,6 +1574,20 @@
   ('numpy._utils._inspect',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_utils\\_inspect.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('numpy.char',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\char\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\core\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core._utils',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\core\\_utils.py',
+   'PYMODULE'),
+  ('numpy.ctypeslib',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\ctypeslib.py',
+   'PYMODULE'),
+=======
   ('numpy._utils._pep440',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\_utils\\_pep440.py',
    'PYMODULE'),
@@ -1823,6 +1906,7 @@
   ('numpy.distutils.unixccompiler',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\distutils\\unixccompiler.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.dtypes',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\dtypes.py',
    'PYMODULE'),
@@ -1832,9 +1916,12 @@
   ('numpy.f2py',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\__init__.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.f2py.__main__',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\__main__.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.f2py.__version__',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\__version__.py',
    'PYMODULE'),
@@ -1853,9 +1940,12 @@
   ('numpy.f2py._isocbind',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\_isocbind.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.f2py._src_pyf',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\_src_pyf.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.f2py.auxfuncs',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\auxfuncs.py',
    'PYMODULE'),
@@ -1892,6 +1982,8 @@
   ('numpy.f2py.symbolic',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\symbolic.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.f2py.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\tests\\__init__.py',
    'PYMODULE'),
@@ -1988,6 +2080,7 @@
   ('numpy.f2py.tests.util',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\tests\\util.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.f2py.use_rules',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\f2py\\use_rules.py',
    'PYMODULE'),
@@ -2003,6 +2096,8 @@
   ('numpy.fft.helper',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\fft\\helper.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.fft.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\fft\\tests\\__init__.py',
    'PYMODULE'),
@@ -2012,6 +2107,7 @@
   ('numpy.fft.tests.test_pocketfft',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\fft\\tests\\test_pocketfft.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.lib',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\__init__.py',
    'PYMODULE'),
@@ -2069,9 +2165,12 @@
   ('numpy.lib._ufunclike_impl',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\_ufunclike_impl.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.lib._user_array_impl',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\_user_array_impl.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.lib._utils_impl',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\_utils_impl.py',
    'PYMODULE'),
@@ -2102,6 +2201,8 @@
   ('numpy.lib.stride_tricks',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\stride_tricks.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.lib.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\tests\\__init__.py',
    'PYMODULE'),
@@ -2183,6 +2284,7 @@
   ('numpy.lib.user_array',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\lib\\user_array.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.linalg',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\linalg\\__init__.py',
    'PYMODULE'),
@@ -2192,6 +2294,8 @@
   ('numpy.linalg.linalg',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\linalg\\linalg.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.linalg.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\linalg\\tests\\__init__.py',
    'PYMODULE'),
@@ -2204,6 +2308,7 @@
   ('numpy.linalg.tests.test_regression',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\linalg\\tests\\test_regression.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.ma',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\ma\\__init__.py',
    'PYMODULE'),
@@ -2216,6 +2321,8 @@
   ('numpy.ma.mrecords',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\ma\\mrecords.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.ma.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\ma\\tests\\__init__.py',
    'PYMODULE'),
@@ -2249,6 +2356,7 @@
   ('numpy.ma.timer_comparison',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\ma\\timer_comparison.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.matlib',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\matlib.py',
    'PYMODULE'),
@@ -2258,6 +2366,8 @@
   ('numpy.matrixlib.defmatrix',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\matrixlib\\defmatrix.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('numpy.matrixlib.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\matrixlib\\tests\\__init__.py',
    'PYMODULE'),
@@ -2282,6 +2392,7 @@
   ('numpy.matrixlib.tests.test_regression',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\matrixlib\\tests\\test_regression.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.polynomial',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\polynomial\\__init__.py',
    'PYMODULE'),
@@ -2309,6 +2420,14 @@
   ('numpy.polynomial.polyutils',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\polynomial\\polyutils.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('numpy.random',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\random\\__init__.py',
+   'PYMODULE'),
+  ('numpy.random._pickle',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\random\\_pickle.py',
+   'PYMODULE'),
+=======
   ('numpy.polynomial.tests',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\polynomial\\tests\\__init__.py',
    'PYMODULE'),
@@ -2396,6 +2515,7 @@
   ('numpy.random.tests.test_smoke',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\random\\tests\\test_smoke.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.rec',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\rec\\__init__.py',
    'PYMODULE'),
@@ -2417,6 +2537,11 @@
   ('numpy.testing.overrides',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\testing\\overrides.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('numpy.typing',
+   'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\typing\\__init__.py',
+   'PYMODULE'),
+=======
   ('numpy.testing.print_coercion_tables',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\testing\\print_coercion_tables.py',
    'PYMODULE'),
@@ -2480,6 +2605,7 @@
   ('numpy.typing.tests.test_typing',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\typing\\tests\\test_typing.py',
    'PYMODULE'),
+>>>>>>> gui
   ('numpy.version',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\numpy\\version.py',
    'PYMODULE'),
@@ -2489,6 +2615,8 @@
   ('optparse',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\optparse.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('ordlookup',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\ordlookup\\__init__.py',
    'PYMODULE'),
@@ -3395,12 +3523,18 @@
   ('pandas.util.version',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\pandas\\util\\version\\__init__.py',
    'PYMODULE'),
+>>>>>>> gui
   ('pathlib',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pathlib.py',
    'PYMODULE'),
   ('pdb',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pdb.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('pickle',
+   'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pickle.py',
+   'PYMODULE'),
+=======
   ('pefile',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\pefile.py',
    'PYMODULE'),
@@ -3458,12 +3592,18 @@
   ('pkg_resources.extern',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
    'PYMODULE'),
+>>>>>>> gui
   ('pkgutil',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pkgutil.py',
    'PYMODULE'),
   ('platform',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\platform.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('pprint',
+   'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pprint.py',
+   'PYMODULE'),
+=======
   ('plistlib',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\plistlib.py',
    'PYMODULE'),
@@ -3497,6 +3637,7 @@
   ('py',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\py.py',
    'PYMODULE'),
+>>>>>>> gui
   ('py_compile',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\py_compile.py',
    'PYMODULE'),
@@ -3509,6 +3650,8 @@
   ('pydoc_data.topics',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\pydoc_data\\topics.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('pytest',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\pytest\\__init__.py',
    'PYMODULE'),
@@ -3527,6 +3670,7 @@
   ('pytz.tzinfo',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\pytz\\tzinfo.py',
    'PYMODULE'),
+>>>>>>> gui
   ('queue',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\queue.py',
    'PYMODULE'),
@@ -3536,6 +3680,11 @@
   ('random',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\random.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('runpy',
+   'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\runpy.py',
+   'PYMODULE'),
+=======
   ('rlcompleter',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\rlcompleter.py',
    'PYMODULE'),
@@ -4713,6 +4862,7 @@
   ('scipy.version',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\scipy\\version.py',
    'PYMODULE'),
+>>>>>>> gui
   ('secrets',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\secrets.py',
    'PYMODULE'),
@@ -4728,6 +4878,8 @@
   ('signal',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\signal.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('site',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site.py',
    'PYMODULE'),
@@ -5250,12 +5402,15 @@
   ('sklearn.utils.validation',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\sklearn\\utils\\validation.py',
    'PYMODULE'),
+>>>>>>> gui
   ('socket',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\socket.py',
    'PYMODULE'),
   ('socketserver',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\socketserver.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('sqlite3',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\sqlite3\\__init__.py',
    'PYMODULE'),
@@ -5265,6 +5420,7 @@
   ('sqlite3.dump',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\sqlite3\\dump.py',
    'PYMODULE'),
+>>>>>>> gui
   ('ssl',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\ssl.py',
    'PYMODULE'),
@@ -5298,9 +5454,12 @@
   ('threadpoolctl',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\threadpoolctl.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('timeit',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\timeit.py',
    'PYMODULE'),
+>>>>>>> gui
   ('tkinter',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tkinter\\__init__.py',
    'PYMODULE'),
@@ -5319,6 +5478,8 @@
   ('tokenize',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tokenize.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('tomli',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\tomli\\__init__.py',
    'PYMODULE'),
@@ -5331,6 +5492,7 @@
   ('tomli._types',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\tomli\\_types.py',
    'PYMODULE'),
+>>>>>>> gui
   ('tracemalloc',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
    'PYMODULE'),
@@ -5358,9 +5520,12 @@
   ('unittest.main',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\unittest\\main.py',
    'PYMODULE'),
+<<<<<<< HEAD
+=======
   ('unittest.mock',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\unittest\\mock.py',
    'PYMODULE'),
+>>>>>>> gui
   ('unittest.result',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\unittest\\result.py',
    'PYMODULE'),
@@ -5400,6 +5565,11 @@
   ('webbrowser',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\webbrowser.py',
    'PYMODULE'),
+<<<<<<< HEAD
+  ('xml',
+   'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\__init__.py',
+   'PYMODULE'),
+=======
   ('win32ctypes',
    'C:\\Users\\wrons\\ug-studies-se\\venv\\lib\\site-packages\\win32ctypes\\__init__.py',
    'PYMODULE'),
@@ -5529,6 +5699,7 @@
   ('xml.dom.xmlbuilder',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\dom\\xmlbuilder.py',
    'PYMODULE'),
+>>>>>>> gui
   ('xml.etree',
    'C:\\Users\\wrons\\AppData\\Local\\Programs\\Python\\Python310\\lib\\xml\\etree\\__init__.py',
    'PYMODULE'),
