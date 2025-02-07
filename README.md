@@ -56,23 +56,23 @@ Raport końcowy – prezentacja wyników użytkownikowi
 ## 📑 Struktura projektu
 
 ug-studies-se/
-├── assets/                 # Logo, ikony <br />
-├── model/                  # Model ML i skalowanie danych <br />
-│   ├── best_model.pkl      # Wytrenowany model XGBoost
-│   ├── scalar.pkl          # StandardScaler dla zmiennych wejściowych
-│   ├── prediction.py       # Skrypt do predykcji
-├── gui/                    # Interfejs użytkownika
-│   ├── main_window.py      # Ekran główny
-│   ├── question1.py        # Pytania demograficzne
-│   ├── question2.py        # Czynniki stylu życia
-│   ├── question3.py        # Historia medyczna
-│   ├── question4.py        # Pomiary kliniczne
-│   ├── question5.py        # Ocena funkcjonalna
-│   ├── question6.py        # Objawy
-│   ├── result.py           # Raport końcowy
-├── dist/                   # Folder z wygenerowanym plikiem .exe
-├── requirements.txt        # Lista zależności
-├── main.py                 # Główny plik uruchamiający aplikację
+├── assets/                 # Logo, ikony<br />
+├── model/                  # Model ML i skalowanie danych<br />
+│   ├── best_model.pkl      # Wytrenowany model XGBoost<br />
+│   ├── scalar.pkl          # StandardScaler dla zmiennych wejściowych<br />
+│   ├── prediction.py       # Skrypt do predykcji<br />
+├── gui/                    # Interfejs użytkownika<br />
+│   ├── main_window.py      # Ekran główny<br />
+│   ├── question1.py        # Pytania demograficzne<br />
+│   ├── question2.py        # Czynniki stylu życia<br />
+│   ├── question3.py        # Historia medyczna<br />
+│   ├── question4.py        # Pomiary kliniczne<br />
+│   ├── question5.py        # Ocena funkcjonalna<br />
+│   ├── question6.py        # Objawy<br />
+│   ├── result.py           # Raport końcowy<br />
+├── dist/                   # Folder z wygenerowanym plikiem .exe<br />
+├── requirements.txt        # Lista zależności<br />
+├── main.py                 # Główny plik uruchamiający aplikację<br />
 
 ## 📌 Dalsze plany rozwoju
 Przygotowanie raportu w bardziej przystępnej dla lekarza prowadzącego formie.
