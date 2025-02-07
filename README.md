@@ -1,4 +1,4 @@
-Dokumentacja - Alzheimer Predictor
+# Dokumentacja - Alzheimer Predictor
 
 📌 Opis projektu
 
