@@ -1,10 +1,10 @@
 # Dokumentacja - Alzheimer Predictor
 
-📌 Opis projektu
+## 📌 Opis projektu
 
 Alzheimer Predictor to aplikacja desktopowa napisana w Pythonie, służąca do szacowania ryzyka zachorowania na chorobę Alzheimera na podstawie informacji uzyskanych od użytkownika. Program zbiera dane demograficzne, dotyczące stylu życia oraz historii medycznej, a następnie dokonuje predykcji na podstawie wytrenowanego modelu uczenia maszynowego XGBoost.
 
-📦 Wymagania systemowe
+## 📦 Wymagania systemowe
 
 Python 3.10 lub nowszy
 
@@ -14,7 +14,7 @@ Pamięć RAM: min. 4GB
 
 Wolne miejsce na dysku: min. 500MB
 
-🛠 Technologie
+## 🛠 Technologie
 
 Python (tkinter, joblib, scikit-learn, numpy, xgboost)
 
@@ -24,7 +24,7 @@ Model ML: XGBoostClassifier
 
 Pakowanie do .exe: PyInstaller
 
-📥 Instalacja
+## 📥 Instalacja
 
 1. Pobranie repozytorium
 
@@ -41,7 +41,7 @@ Pakowanie do .exe: PyInstaller
 
  python main.py
 
-🎯 Funkcjonalności
+## 🎯 Funkcjonalności
 
 Ekran powitalny – prezentacja celu programu
 
@@ -51,7 +51,7 @@ Predykcja – model ML szacuje ryzyko choroby Alzheimera
 
 Raport końcowy – prezentacja wyników użytkownikowi
 
-📑 Struktura projektu
+## 📑 Struktura projektu
 
 ug-studies-se/
 ├── assets/                 # Logo, ikony
@@ -72,7 +72,7 @@ ug-studies-se/
 ├── requirements.txt        # Lista zależności
 ├── main.py                 # Główny plik uruchamiający aplikację
 
-🚀 Tworzenie pliku .exe
+## 🚀 Tworzenie pliku .exe
 
 Aby wygenerować plik wykonywalny .exe, uruchom:
 
@@ -89,10 +89,10 @@ pyinstaller --onefile --windowed --icon="ug-studies-se\assets\icon.ico" \
 
 Po zakończeniu kompilacji, plik .exe będzie w folderze dist/.
 
-👨‍💻 Autorzy
+## 👨‍💻 Autorzy
 
 Michał Wroński
 
 Karol Kobus
 
-📝 Licencja - otwarta
+## 📝 Licencja - otwarta
