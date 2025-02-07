@@ -82,10 +82,12 @@ class ResultWindow:
             result_label.pack(pady=20)
 
             if prediction == 1:
-                result_label.config(text="Istnieje wysokie prawdopodobieństwo, że chorujesz na chorobę Alzheimera",
-                                    fg="red")
+                result_label.config(
+                    text="Wynik pozytywny\nIstnieje wysokie prawdopodobieństwo, że chorujesz na Alzheimera.",
+                    fg="red", font=("Arial", 14, "bold"))
             else:
-                result_label.config(text="Nie chorujesz na chorobę Alzheimera", fg="green")
+                result_label.config(text="Wynik negatywny.\nNie chorujesz na chorobę Alzheimera.",
+                                    fg="green", font=("Arial", 14, "bold"))
         else:
             result_label = tk.Label(root, text="Błąd: Nie znaleziono modelu lub skalera.", font=("Arial", 14, "bold"),
                                     fg="red")
