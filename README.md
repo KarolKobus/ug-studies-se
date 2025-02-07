@@ -35,15 +35,13 @@ Pakowanie do .exe: PyInstaller
 
 2. Utworzenie środowiska wirtualnego i instalacja zależności
 
- python -m venv venv
- source venv/Scripts/activate  # Windows
- pip install -r requirements.txt
+ Wystarczy uruchomić "Plik instalacyjny.bat" - środowisko wirtualne zostanie automatycznie stworzone, uzupełnione o odpowiednie biblioteki, a następnie
+ wygenerowany zostanie plik wykonywalny main.exe.
 
-3. Uruchomienie aplikacji w trybie deweloperskim
+3. Uruchomienie aplikacji
 
- python main.py
-
-Opcjonalnie - wygenerowanie pliku .exe
+ Uruchomić plik main.exe
+   
 
 ## 🎯 Funkcjonalności
 
@@ -76,14 +74,10 @@ ug-studies-se/
 ├── requirements.txt        # Lista zależności
 ├── main.py                 # Główny plik uruchamiający aplikację
 
-## 🚀 Tworzenie pliku .exe
-
-Aby wygenerować plik wykonywalny .exe, uruchom:
-
-pyinstaller --onefile --windowed --icon="ug-studies-se/assets/icon.ico" --add-data "ug-studies-se/assets/logo.png;assets/" --add-data "ug-studies-se/model/best_model.pkl;model/" --add-data "ug-studies-se/model/scalar.pkl;model/" --hidden-import=joblib --hidden-import=scipy --hidden-import=scipy.special --hidden-import=xgboost --hidden-import=numpy --hidden-import=numpy._core --hidden-import=numpy._core.multiarray --hidden-import=numpy.linalg --hidden-import=tkinter --hidden-import=sklearn --hidden-import=importlib.resources --collect-submodules xgboost --collect-submodules numpy --exclude-module xgboost.testing --exclude-module hypothesis main.py
-
-
-Po zakończeniu kompilacji, plik .exe będzie w folderze dist/.
+## 📌 Dalsze plany rozwoju
+Przygotowanie raportu w bardziej przystępnej dla lekarza prowadzącego formie.
+Dodanie wersji anglojęzycznej.
+Wersja webowa.
 
 ## 👨‍💻 Autorzy
 
