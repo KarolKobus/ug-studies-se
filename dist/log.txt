@@ -1,0 +1,12 @@
+🔍 DEBUG - Szukam modelu w: C:\Users\wrons\ug-studies-se\dist\model\best_model.pkl
+🔍 DEBUG - Szukam skalera w: C:\Users\wrons\ug-studies-se\dist\model\scalar_new.pkl
+✅ Model XGBoost załadowany poprawnie.
+✅ Skaler załadowany poprawnie.
+✅ Normalizuję dane przed predykcją...
+✅ Predykcja zakończona sukcesem: [1]
+🔍 DEBUG - Szukam modelu w: C:\Users\wrons\ug-studies-se\dist\model\best_model.pkl
+🔍 DEBUG - Szukam skalera w: C:\Users\wrons\ug-studies-se\dist\model\scalar_new.pkl
+✅ Model XGBoost załadowany poprawnie.
+✅ Skaler załadowany poprawnie.
+✅ Normalizuję dane przed predykcją...
+✅ Predykcja zakończona sukcesem: [0]
