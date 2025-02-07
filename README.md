@@ -2,7 +2,9 @@
 
 ## 📌 Opis projektu
 
-Alzheimer Predictor to aplikacja desktopowa napisana w Pythonie, służąca do szacowania ryzyka zachorowania na chorobę Alzheimera na podstawie informacji uzyskanych od użytkownika. Program zbiera dane demograficzne, dotyczące stylu życia oraz historii medycznej, a następnie dokonuje predykcji na podstawie wytrenowanego modelu uczenia maszynowego XGBoost.
+Alzheimer Predictor to aplikacja desktopowa napisana w Pythonie, służąca do szacowania ryzyka zachorowania na chorobę Alzheimera na podstawie informacji uzyskanych od użytkownika. Program zbiera dane demograficzne, dotyczące stylu życia oraz historii medycznej, a następnie dokonuje predykcji na podstawie wytrenowanego modelu uczenia maszynowego XGBoost (XGBoost okazał się najlepszy).
+
+Ze względu na ograniczoną wielkość plików, które można umieszczać na GitHubie, nie ma tu pliku wykonywalnego (main.exe). Można go wygenerować samemu przy pomocy podanego niżej polecenia lub otworzyć plik przesłany innym kanałem.
 
 ## 📦 Wymagania systemowe
 
