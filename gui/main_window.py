@@ -10,7 +10,7 @@ class MainWindow:
     def __init__(self, root):
         self.root = root
         self.root.title("Alzheimer Predictor")
-        self.root.geometry("600x400")
+        self.root.geometry("600x500")
         self.root.resizable(False, False)
 
         # Funkcja do poprawiania ścieżek
@@ -41,6 +41,13 @@ class MainWindow:
         # Przycisk Rozpocznij
         start_button = tk.Button(root, text="Rozpocznij", font=("Arial", 14), command=self.open_question1)
         start_button.pack(pady=20)
+
+        # 📝 **Dodanie informacji o projekcie na dole**
+        footer_label = tk.Label(root, text="Projekt zaliczeniowy na przedmiot Inżynieria Oprogramowania\n"
+                                           "Autorzy: Michał Wroński, Karol Kobus\n"
+                                           "v. 0.9   2025",
+                                font=("Arial", 9), fg="gray")
+        footer_label.pack(side="bottom", pady=5)
 
     def open_question1(self):
         self.root.destroy()
