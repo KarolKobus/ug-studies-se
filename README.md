@@ -56,7 +56,7 @@ Raport końcowy – prezentacja wyników użytkownikowi
 ## 📑 Struktura projektu
 
 ug-studies-se/<br />
-├── assets/                 &emsp;&emsp;&emsp;# Logo, ikony<br />
+├── assets/                 # Logo, ikony<br />
 ├── model/                  # Model ML i skalowanie danych<br />
 │   ├── best_model.pkl      # Wytrenowany model XGBoost<br />
 │   ├── scalar.pkl          # StandardScaler dla zmiennych wejściowych<br />
