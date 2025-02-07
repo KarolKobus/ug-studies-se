@@ -87,6 +87,7 @@ def get_user_input():
 
     return np.array([user_data])  # Konwersja do tablicy NumPy
 
+
 def predict_outcome(model, scaler, user_data):
     """ Normalizuje dane użytkownika i dokonuje predykcji modelem XGBoost """
     try:
