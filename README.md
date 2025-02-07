@@ -76,10 +76,10 @@ ug-studies-se/
 
 Aby wygenerować plik wykonywalny .exe, uruchom:
 
-pyinstaller --onefile --windowed --icon="C:\Users\wrons\ug-studies-se\assets\icon.ico" \
---add-data "C:\Users\wrons\ug-studies-se\assets\logo.png;assets/" \
---add-data "C:\Users\wrons\ug-studies-se\model\best_model.pkl;model/" \
---add-data "C:\Users\wrons\ug-studies-se\model\scalar.pkl;model/" \
+pyinstaller --onefile --windowed --icon="ug-studies-se\assets\icon.ico" \
+--add-data "ug-studies-se\assets\logo.png;assets/" \
+--add-data "ug-studies-se\model\best_model.pkl;model/" \
+--add-data "ug-studies-se\model\scalar.pkl;model/" \
 --hidden-import=joblib --hidden-import=scipy --hidden-import=scipy.special \
 --hidden-import=xgboost --hidden-import=numpy --hidden-import=numpy._core \
 --hidden-import=numpy._core.multiarray --hidden-import=numpy.linalg \
