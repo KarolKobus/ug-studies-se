@@ -81,8 +81,8 @@ Wersja webowa.
 
 ## 👨‍💻 Autorzy
 
-Michał Wroński
+Michał Wroński: GUI, tworzenie pliku wykonywalnego
 
-Karol Kobus
+Karol Kobus: modele, tworzenie pliku instalacyjnego
 
 ## 📝 Licencja - otwarta
